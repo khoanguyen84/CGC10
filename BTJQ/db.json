@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "Name": "IP 7S Plus",
+      "Manufacture": "Viet Nam",
+      "Description": "Viet Nam",
+      "id": 2
+    },
+    {
+      "Name": "IP 8S Plus",
+      "Manufacture": "Viet Nam",
+      "Description": "Viet Nam",
+      "id": 3
+    }
+  ]
+}

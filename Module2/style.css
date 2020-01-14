@@ -1,0 +1,18 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+table, tr, th, td{
+    border: 2px dotted blue ! important;
+    border-collapse: collapse;
+}
+
+.tb, .tb tr, .tb th, .tb td{
+    border: 2px solid yellow ! important;
+    color: pink;
+    font-style: italic;
+    padding:2px;
+}
+#tbEmployee{
+    border: 2px solid green ! important;
+}

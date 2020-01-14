@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let row = 5;
+            let column = 6;
+            let maxtrix = [];
+            for(let i = 0; i< row; i++)
+            {
+                maxtrix[i] = new Array();
+                for(let j =0; j< column; j++)
+                {
+                    maxtrix[i][j] = Math.floor(Math.random()*100 + 1);
+                }                
+            }
+
+            for(let i = 0; i<row; i++){
+                for(let j=0; j<column ;j++){
+                    document.write(maxtrix[i][j] + ' ');
+                }
+                document.write("<br>");
+            }
+        </script>
+    </body>
+</html>

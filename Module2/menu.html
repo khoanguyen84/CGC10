@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin:0px;
+                padding: 0px;
+            }
+            #menu{
+                width: 150px;
+            }
+
+            #menu ul{
+                list-style: none;
+                width: 100%;
+                
+            }
+
+            #menu ul li{
+                border: 1px solid white;
+                background-color: green;
+                border-radius: 10px;
+                position: relative;
+            }
+
+            #menu ul li a{
+                text-decoration: none;
+                display: block;
+                padding: 4px;
+                color: white;
+            }
+
+            #menu ul li a:hover{
+                text-decoration: none;
+                display: block;
+                padding: 4px;
+                background-color: darkgreen;
+                color: white;
+                border-radius: 10px;
+            }
+            #menu ul li ul{
+                display: none;
+                width: 150px;
+                position: absolute;
+            }
+            #menu ul li:hover ul{
+                display: block;
+                top: 0px;
+                left:150px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a href="#">Chè</a>
+                    <ul>
+                        <li><a href="#">Bột lọc</a></li>
+                        <li><a href="#">Bắp</a></li>
+                        <li><a href="#">Đậu xanh</a></li>
+                        <li><a href="#">Đậu đỏ</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Kem</a></li>
+                <li><a href="#">Ốc</a></li>
+                <li><a href="#">Xoài</a>
+                    <ul>
+                        <li><a href="#">Lắc</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

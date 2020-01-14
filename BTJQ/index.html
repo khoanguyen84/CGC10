@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="site.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Products management</h1>
+            <a href="javascript:void(0);" 
+                class="btn btn-success"
+                onclick="product.showModal()">
+                <i class="fa fa-plus"></i> Add Product
+            </a>
+            <div class="mt-2 table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Manufacture</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbProduct">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="addEditProduct" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Product</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="fromProduct">
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-9">
+                                <input class="form-control" type="text" name="Name" id="Name"
+                                        data-rule-required = "true">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label>Manufacture</label>
+                            </div>
+                            <div class="col-9">
+                                <input class="form-control" type="text" name="Manufacture" 
+                                id="Manufacture" data-rule-required = "true">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label>Description</label>
+                            </div>
+                            <div class="col-9">
+                                <input class="form-control" type="text" name="Description" 
+                                id="Description" data-rule-required = "true">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:;" class="btn btn-primary" onclick="product.save()">Save</a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+    <script src="scripts/products/product.js"></script>
+</html>

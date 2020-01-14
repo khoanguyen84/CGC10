@@ -1,0 +1,76 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            class Animal{
+                constructor(n, s){
+                    this.name = n;
+                    this.sound = s;
+                }
+                speak(){
+                    return this.name + " speaks " + this.sound;
+                }
+                move(){
+                    return "step by step";
+                }
+                static breath(){
+                    return "still breath, still live";
+                }
+            }
+
+            class Dog extends Animal{
+                constructor(n, s, l){
+                    super(n, s);
+                    this.legs = l;
+                }
+                setSound(s){
+                    this.sound = s;
+                }
+            }
+
+            class Fish extends Animal{
+                constructor(n, s){
+                    super(n,s);
+                }
+                move(){
+                    return super.move() + 'swim';
+                    //return "swim";
+                }
+                environment(){
+                    return "water";
+                }
+            }
+
+            class Polygon{
+                constructor(w, h){
+                    this.width = w;
+                    this.height = h;
+                }
+                area(){
+                    return this.width * this.height;
+                }
+                primeter(){
+                    return (this.width + this.height)*2;
+                }
+            }
+
+            class Rectangle extends  Polygon{
+                constructor(w,h){
+                    super(w, h);
+                }
+            }
+
+            class Circle extends Polygon{
+                constructor(r, p = Math.PI){
+                    super(r, p);
+                }
+                area(){
+                    return this.height*this.width*this.width;
+                }
+                primeter(){
+                    return 2*this.width*this.height;
+                }
+            }
+        </script>
+    </body>
+</html>

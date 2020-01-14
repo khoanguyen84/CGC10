@@ -1,0 +1,55 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function food(n){
+                this.name = n;
+
+                this.decrease = function(v){
+                    this.weight -= v;
+                }
+
+                this.status = function(){
+                    return this.weight > 0;
+                }
+
+                this.setWeight = function(w){
+                    this.weight = w;
+                }
+
+                this.getWeight = function(){
+                    return this.weight;
+                }
+
+                this.validValue = function(v){
+                    return v <= this.weight;
+                }
+            }
+
+            function person(n){
+                this.name = n;
+
+                this.increase = function(v){
+                    this.weight += v;
+                }
+
+                this.setWeight = function(w){
+                    this.weight = w;
+                }
+
+                this.getWeight = function(){
+                    return this.weight;
+                }
+
+                this.eat = function(food, v){
+                    if(v <= food.getWeight()){
+                        food.decrease(v);
+                        this.increase(v);
+                    }
+                }
+            }
+
+
+        </script>
+    </body>
+</html>

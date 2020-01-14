@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let count = 0;
+            let step = 2;
+            let prime = 0;
+            do
+            {
+                prime = 0;
+                for(let i = 2; i <= Math.sqrt(step); i++){
+                    if(step%i === 0){
+                        prime ++;
+                    }
+                }
+                if(prime === 0)
+                {
+                    document.write(step + "<br>");
+                    count++;
+                }
+                step ++;
+            }
+            while(count < 20)
+        </script>
+    </body>
+</html>

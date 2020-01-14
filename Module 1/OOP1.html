@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let a, b, c;
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            c = int.Parse(Console.ReadLine());                                   
+            if ((a + b > c) && (a + c > b) && (c + b > a))
+            {
+                if ((a == b) && (b == c)) { 
+                    Console.WriteLine("1"); 
+                    goto: quit;
+                }
+                if ((a == b) || (b == c) || (c == a)) { 
+                    Console.WriteLine("2"); 
+                    goto: quit; 
+                }
+                let sqta = a * a;
+                let sqtb = b * b;
+                let sqtc = c * c;
+                if ((sqta + sqtb == sqtc) || (sqtb + sqtc == sqta) || (sqta + sqtc == sqtb)) 
+                    Console.WriteLine("3");
+                else Console.WriteLine("0");
+            }   
+            else 
+                Console.WriteLine("-1");
+            quit:
+            Console.ReadKey();
+        </script>
+    </body>
+</html>

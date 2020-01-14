@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function inputSize(){
+                let s = +prompt("input size of array:");
+                return s;
+            }
+
+            function createArray(size){
+                let arr = new Array();
+                for(let i = 0; i< size; i++){
+                    arr[i] = +prompt("input A["+ i + "]:");
+                }
+                return arr;
+            }
+
+            function sumArray(s, array){
+                let sum = 0;
+                for(let i=0; i< s; i++){
+                    sum += array[i];
+                }
+                return sum;
+            }
+
+            function main(){
+                let size = inputSize();
+                let array = createArray(size);
+                let sum = sumArray(size, array);
+                document.write("sum = " + sum);
+            }
+            
+            main();
+        </script>
+    </body>
+</html>

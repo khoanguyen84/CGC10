@@ -1,0 +1,61 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="pArray"></h1>
+        <script>
+            function InputN(){
+                let n;
+                do{
+                    n = +prompt('input n:');
+                }
+                while(isNaN(n));
+                return n;
+            }
+
+            function CreateArray(number){
+                let arr = new Array();
+                for(let i=0; i<number; i++){
+                    arr[i] = Math.floor(Math.random()*40) + 10;
+                }
+                return arr;
+            }
+
+            function SumArray(array){
+                let total = 0;
+                for(let i = 0; i< array.length; i++){
+                    total += array[i];
+                }
+                return total;
+            }
+
+            function ShowArray(arr){
+                return arr.join('-');
+            }
+
+            function Main(){
+                let n = InputN();
+                let list = CreateArray(n);
+                let sum = SumArray(list);
+                let str = ShowArray(list);
+                document.getElementById("pArray").innerHTML = str;
+                document.write('Array is:' + str);
+                document.write('<br>');
+                document.write('total is: ' + sum);
+
+                // let n2 = InputN();
+                // let list2 = CreateArray(n2);
+                // let sum2 = SumArray(list2);
+                // document.write('<br>');
+                // document.write('Array2 is:' + ShowArray(list2));
+                // document.write('<br>');
+                // document.write('total2 is: ' + sum2);
+                //document.write('total is: ' + SumArray(CreateArray(InputN())));
+            }
+
+            Main();
+        </script>
+
+    </body>
+</html>
